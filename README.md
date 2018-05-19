@@ -1,4 +1,6 @@
-# MeanAngular6
+# MEAN Stack Angular 6 CRUD Web Application
+
+This source codes if part of [MEAN Stack Angular 6 CRUD Web Application]() tutorial.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 
