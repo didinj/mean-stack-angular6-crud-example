@@ -1,5 +1,9 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { BookComponent } from './book.component';
 
 describe('BookComponent', () => {
@@ -8,7 +12,9 @@ describe('BookComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BookComponent ]
+      imports: [ RouterTestingModule, ReactiveFormsModule, HttpClientModule, MatTableModule ],
+      declarations: [ BookComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
