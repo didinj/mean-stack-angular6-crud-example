@@ -6,7 +6,7 @@ import { catchError, tap, map } from 'rxjs/operators';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
-const apiUrl = "/api";
+const apiUrl = '/api';
 
 @Injectable({
   providedIn: 'root'
@@ -28,10 +28,10 @@ export class ApiService {
     }
     // return an observable with a user-facing error message
     return throwError('Something bad happened; please try again later.');
-  };
+  }
 
   private extractData(res: Response) {
-    let body = res;
+    const body = res;
     return body || { };
   }
 

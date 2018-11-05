@@ -11,13 +11,13 @@ import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Valida
 export class BookEditComponent implements OnInit {
 
   bookForm: FormGroup;
-  id:string = '';
-  isbn:string = '';
-  title:string = '';
-  description:string = '';
-  author:string = '';
-  publisher:string = '';
-  published_year:string = '';
+  id = '';
+  isbn = '';
+  title = '';
+  description = '';
+  author = '';
+  publisher = '';
+  published_year = '';
 
   constructor(private router: Router, private route: ActivatedRoute, private api: ApiService, private formBuilder: FormBuilder) { }
 
@@ -47,10 +47,10 @@ export class BookEditComponent implements OnInit {
     });
   }
 
-  onFormSubmit(form:NgForm) {
+  onFormSubmit(form: NgForm) {
     this.api.updateBook(this.id, form)
       .subscribe(res => {
-          let id = res['_id'];
+          const id = res['_id'];
           this.router.navigate(['/book-details', id]);
         }, (err) => {
           console.log(err);
